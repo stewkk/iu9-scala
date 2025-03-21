@@ -27,7 +27,7 @@ class FreeGroup private {
 
   def +(other: FreeGroup) = new FreeGroup(value+other.value)
 
-  def inverse() : FreeGroup = {
+  def unary_- : FreeGroup = {
     def inverseRec(prefix: String, suffix: String): String = {
       suffix.splitAt(2) match {
         case ("", rest) => prefix

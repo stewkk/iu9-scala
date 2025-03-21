@@ -23,7 +23,7 @@ class FreeGroupSuite extends munit.FunSuite {
   }
 
   test("Inverse inverses chars and reverses value") {
-    val got = new lab2.FreeGroup("abãb̃").inverse()
+    val got = -(new lab2.FreeGroup("abãb̃"))
 
     assert(got.value == new lab2.FreeGroup("bab̃ã").value)
   }
