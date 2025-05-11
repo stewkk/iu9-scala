@@ -1,6 +1,7 @@
 package lab2
 
 class FreeGroup private {
+  // TODO: добавить первичный конструктор и заменить на неизменяемое значение
   private var _value = ""
 
   def this(v: String) = {

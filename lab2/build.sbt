@@ -1,7 +1,7 @@
 ThisBuild / scalaVersion := "2.13.12"
 ThisBuild / organization := "com.bmstu-iu9"
 
-lazy val lab1 = project
+lazy val lab2 = project
   .in(file("."))
   .settings(
     name := "Lab2",
