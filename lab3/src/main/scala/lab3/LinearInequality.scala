@@ -1,5 +1,5 @@
 package lab3
 
-class LinearInequality {
+class LinearInequality[T](val a: List[T], b: T) {
 
 }
