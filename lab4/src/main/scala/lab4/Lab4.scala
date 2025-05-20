@@ -26,6 +26,9 @@ object Main {
       case e @ UnaryMinusExpr(expr) => UnaryMinusExpr(simplify(expr))
     };
     simplified match {
+      case DivExpr(_ @ NumExpr(1), other) => other
+      case DivExpr(other, _ @ NumExpr(1)) => other
+      case DivExpr(zero @ NumExpr(0), _) => zero
       case PlusExpr(_ @ NumExpr(lhs), _ @ NumExpr(rhs)) => NumExpr(lhs+rhs)
       case MinusExpr(_ @ NumExpr(lhs), _ @ NumExpr(rhs)) => NumExpr(lhs-rhs)
       case MulExpr(_ @ NumExpr(lhs), _ @ NumExpr(rhs)) => NumExpr(lhs*rhs)
